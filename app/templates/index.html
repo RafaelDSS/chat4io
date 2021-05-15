@@ -1,0 +1,24 @@
+{% extends 'base.html' %} {% block content %}
+<main>
+    <header>
+        <p>Messages</p>
+    </header>
+
+    <article>
+        <section class="messages-list">
+            <div class="items">
+            </div>
+            <div class="box">
+            </div>
+        </section>
+        <section class="message-box">
+            <textarea name="" class="input-message"></textarea>
+            <input class="send-message" type="button" value="Enviar">
+        </section>
+    </article>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/socket.io-client@2/dist/socket.io.js"></script>
+<script src="{{ url_for('static', filename='js/websocket.js') }}"></script>
+
+{% endblock %}
